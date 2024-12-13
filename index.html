@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    <title>Afro Hair Studio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&family=Great+Vibes&display=swap" rel="stylesheet">
+    <!-- Lightbox2 CSS (für erweiterte Galerie) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo-area">
+                <img src="images/logo.png" alt="Afro Hair Studio Logo" class="logo">
+                <h1 class="brand-name">Afro Hair Studio</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#products">Styles</a></li>
+                    <li><a href="#about">Über Uns</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+            <button class="book-now-btn" onclick="scrollToBooking()">Jetzt Buchen</button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 class="hero-subtitle">Entdecke Unsere Styles</h2>
+            <h1 class="hero-title">Express Your <span class="highlight">Afro</span><br/>Own Your Look</h1>
+            <p class="hero-desc">Dein Afro, dein Look, deine Identität – entdecke unsere vielfältige Auswahl.</p>
+            <a href="#booking" class="hero-btn">Dein Termin wartet</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title">Unsere Auswahl</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/products/style1.jpg" alt="Signature Afro Cut">
+                    <h3>Signature Afro Cut</h3>
+                    <p>Perfekte Schnitte für jeden Afro-Haartyp.</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/products/style2.jpg" alt="Color & Highlights">
+                    <h3>Color & Highlights</h3>
+                    <p>Farb-Highlights, um deinen Look einzigartig zu machen.</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/products/style3.jpg" alt="Natural Care">
+                    <h3>Natural Care</h3>
+                    <p>Intensive Pflege für gesundes und glänzendes Afro-Haar.</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/products/style4.jpg" alt="Protective Styling">
+                    <h3>Protective Styling</h3>
+                    <p>Schützende Styles, die deinem Haar Erholung gönnen.</p>
+                </div>
+                <!-- Weitere "Produkte/Services" nach Bedarf -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>Über Uns</h2>
+            <p>Das Afro Hair Studio ist mehr als nur ein Salon – es ist ein Ort, an dem Individualität gefeiert wird. Unsere Expert*innen vereinen traditionelle Afro-Haarkunst mit modernen Techniken, um deinen ganz persönlichen Stil zu kreieren.</p>
+        </div>
+    </section>
+
+    <!-- Contact/Booking Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <p>Adresse: Afrostraße 7, 12345 Stadt</p>
+            <p>Telefon: +49 123 456789</p>
+            <p>E-Mail: info@afrohairstudio.de</p>
+        </div>
+        <div class="booking-form-area">
+            <h2>Jetzt Buchen</h2>
+            <form action="#" method="POST" class="booking-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Dein Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-Mail:</label>
+                    <input type="email" id="email" name="email" placeholder="Deine E-Mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Gewünschte Dienstleistung:</label>
+                    <select id="service" name="service" required>
+                        <option value="">Bitte wählen</option>
+                        <option value="signature-afro-cut">Signature Afro Cut</option>
+                        <option value="color-highlights">Color & Highlights</option>
+                        <option value="natural-care">Natural Care</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Datum:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Uhrzeit:</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+                <button type="submit" class="form-btn">Termin buchen</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Afro Hair Studio. Alle Rechte vorbehalten.</p>
+            <div class="social-links">
+                <a href="#"><img src="images/social/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/social/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="images/social/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/social/tiktok.png" alt="TikTok"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js"></script>
+    <!-- Lightbox2 JS (für erweiterte Galerie) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
+</html>

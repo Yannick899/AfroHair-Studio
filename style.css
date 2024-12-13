@@ -1,0 +1,478 @@
+/* Grundlegende Stile */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('images/studio-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(74, 44, 42, 0.9); /* Transparenter Hintergrund */
+    backdrop-filter: blur(5px); /* Weicher Hintergrund */
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #ffd700; /* Goldfarbe für Branding */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    font-weight: 500;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff0054; /* Pinkfarbe beim Hover */
+}
+
+.book-now-btn {
+    background: #ffd700;
+    color: #4a2c2a;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    white-space: nowrap;
+}
+
+.book-now-btn:hover {
+    background: #e5c100;
+    transform: scale(1.05);
+}
+
+/* Hamburger Menü */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin-bottom: 4px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hero */
+.hero {
+    height: 80vh;
+    background: url('images/hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 60px; /* Platz für Header */
+    overflow: hidden; /* Verhindert Überlauf */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dunkeloverlay */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.3); /* Transparenter Hintergrund für Text */
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle span {
+    color: #ffd700;
+    font-weight: 700;
+}
+
+.hero-title {
+    font-size: 3em;
+    line-height: 1.2;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.hero-title .highlight {
+    color: #ff0054;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.2em;
+    vertical-align: super;
+}
+
+.hero-desc {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #f0f0f0;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: #ffd700;
+    color: #4a2c2a;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.hero-btn:hover {
+    background: #e5c100;
+    transform: scale(1.05);
+}
+
+/* Products Section */
+.products-section {
+    padding: 100px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #4a2c2a;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    padding-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.product-card h3 {
+    font-size: 1.3em;
+    color: #4a2c2a;
+    margin: 15px 0;
+}
+
+.product-card p {
+    color: #666;
+    font-size: 0.9em;
+    padding: 0 10px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* About Section */
+.about-section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2em;
+    font-weight: 700;
+    color: #4a2c2a;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    max-width: 600px;
+    margin: auto;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Contact & Booking */
+.contact-section {
+    padding: 100px 0;
+    text-align: center;
+    background: #f5f5f5;
+}
+
+.contact-section h2 {
+    font-size: 2em;
+    font-weight: 700;
+    color: #4a2c2a;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+}
+
+.booking-form-area {
+    margin: 50px auto 0;
+    max-width: 600px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.booking-form-area h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+    color: #4a2c2a;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #4a2c2a;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-btn {
+    width: 100%;
+    padding: 15px;
+    background: #4a2c2a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+.form-btn:hover {
+    background: #3b231f;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: #4a2c2a;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+/* Responsive Anpassungen */
+
+/* Tablets und kleinere Laptops */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 2.5em;
+    }
+
+    .hero-content {
+        padding: 30px;
+    }
+
+    .product-card img {
+        height: 180px;
+    }
+
+    .booking-form-area {
+        padding: 30px;
+    }
+}
+
+/* Tablets und Smartphones */
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll; /* Entfernt fixed auf mobilen Geräten */
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: rgba(74, 44, 42, 0.9);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        border-radius: 5px;
+        padding: 10px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .book-now-btn {
+        margin-left: 0;
+    }
+
+    .hero-title {
+        font-size: 2em;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+    .logo {
+        height: 35px;
+    }
+
+    .brand-name {
+        font-size: 1em;
+    }
+
+    .hero-title {
+        font-size: 1.5em;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+
+    .product-card img {
+        height: 150px;
+    }
+
+    .booking-form-area {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 1.8em;
+    }
+
+    .hero-desc {
+        font-size: 1em;
+    }
+}
+
+/* Hamburger Menü Animation */
+.hamburger.toggle span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.toggle span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
